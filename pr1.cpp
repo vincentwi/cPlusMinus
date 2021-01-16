@@ -40,7 +40,7 @@ int exercise_4(int n) {
 }
 
 int exercise_5(int n) {
-    int prev=0, prev_prev=1, fib=1;
+    int prev_prev=0, prev=1, fib=1;
     for (int i = 0; i < n; ++i) {
         fib = prev + prev_prev;
         prev_prev = prev;
