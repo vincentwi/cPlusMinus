@@ -2,6 +2,8 @@
 #include <iostream>
 using namespace std;
 
+int RECURSIVE = 0;
+
 int exercise_1(double x, double y, double c_x, double c_y, double r) {   
     if ( (pow(r,2) - (pow((c_x-x),2) + pow((c_y-y),2))) >= 0.0) return 1;
     else return 0;
@@ -50,7 +52,8 @@ int exercise_5(int n) {
 }
 
 int exercise_6(int n) {
-
+    RECURSIVE++;
+    cout << "recursive call #" << RECURSIVE << endl;
     if (n == 1) return 1;
     if (n == 0) return 0;
     return exercise_6(n-1) + exercise_6(n-2);
